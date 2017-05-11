@@ -1,0 +1,18 @@
+Under each Country folder:
+1. origin_conten.txt(fraction of each content type):
+	image, javascript, css, html, audio, vedio, xml, text, application
+
+2. origin_fraction.txt(fraction of byte, # objects, loadtime cycle)
+    byte, # objetcs, loadtime
+
+3. redirect.txt:
+	index, # fraction, loadtime fraction
+	
+4. redirect_ad.txt (with_ad_block):
+	index, # fraction, loadtime fraction
+
+5. redirect_code.txt (status code fraction):
+	301, 302, 303, 307
+
+ignore other files
+ 
