@@ -14,7 +14,7 @@ def get_xy(data, point_num):
     return (x, y)
 
 
-country_list = ['KR']
+country_list = ['IN']
 #country_list = ['AU', 'CA', 'CH', 'GE', 'IN', 'JP', 'KR', 'UK', 'US']
 var = 'load_time'
 

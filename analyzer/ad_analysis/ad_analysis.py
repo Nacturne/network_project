@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-c = 'US'
+c = 'total'
 data_block = pd.DataFrame.from_csv('../../data/{}/with_ad_block_total.txt'.format(c), sep='\t')
 data = pd.DataFrame.from_csv('../../data/{}/without_ad_block_total.txt'.format(c), sep='\t')
 
@@ -42,5 +42,5 @@ print(len(diff_size))
 print(len(data['load_time']))
 
 
-print(np.corrcoef(diff_number, data['load_time'] - data_block['load_time']))
-print(np.corrcoef(diff_size, data['load_time'] - data_block['load_time']))
+print(np.corrcoef(diff_number, data['javascript_number'] - data_block['javascript_number']))
+print(np.corrcoef(diff_size, data['javascript_size'] - data_block['javascript_size']))

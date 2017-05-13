@@ -15,7 +15,7 @@ def get_xy(data, point_num):
 
 
 
-c = 'US'
+c = 'total'
 point_num = 500
 
 var = 'load_time'

@@ -7,8 +7,8 @@ from sklearn.linear_model import Ridge, RidgeCV, Lasso, LassoCV
 from sklearn.metrics import mean_squared_error
 
 
-c = 'total'
-df = pd.DataFrame.from_csv('redirections/type_data/{}/with_ad_block_total.txt'.format(c), sep='\t')
+c = 'US'
+df = pd.DataFrame.from_csv('redirections/type_data/{}/without_ad_block_total.txt'.format(c), sep='\t')
 #df = df[df['load_time_std']<1000]
 
 
@@ -17,7 +17,7 @@ df = pd.DataFrame.from_csv('redirections/type_data/{}/with_ad_block_total.txt'.f
 vars=['html_number', 'html_size',
       'image_number', 'image_size',
       'javascript_number',
-      'red_number_frac_x',
+      'red_number_frac',
       'server_number']
 
 y = df['load_time']
@@ -39,7 +39,11 @@ coefs = np.asarray(coefs)
 row, col = coefs.shape
 
 
-
+vars=['html_number', 'html_size',
+      'image_number', 'image_size',
+      'javascript_number',
+      'red_number_frac',
+      'server_number']
 markers = ['.', ',', 'o', 'v', '^', '1', '2', '3', '4', 's', 'p', 'P', '*', 'h', 'x', '1', 'D']
 
 for i, marker, label in zip(range(col), markers, vars):
@@ -50,7 +54,7 @@ for i, marker, label in zip(range(col), markers, vars):
     plt.xscale('log')
     plt.legend()
 
-plt.title('LASSO results for Page Loading Time\n{} (with_ad_block)'.format(c))
+plt.title('LASSO results for Page Loading Time\n{} (without_ad_block)'.format(c))
 plt.show()
 
 

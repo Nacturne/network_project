@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-data = pd.DataFrame.from_csv('data/valid_stats.txt', sep='\t')
+data = pd.DataFrame.from_csv('data/total/without_ad_block_total.txt', sep='\t')
 
 
 print data[['image_size', 'javascript_size', 'css_size', 'html_size', 'total_size', 'load_time']].corr()
